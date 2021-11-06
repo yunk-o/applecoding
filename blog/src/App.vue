@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -36,14 +37,27 @@
         </div>
       </div>
     </nav>
+    <router-link to="/" >홈페이지</router-link>
+    <router-link to="/list" >리스트페이지</router-link>
+    <router-link to="/detail" >디테일페이지</router-link>
+    <router-view :blogTxt="blogTxt"></router-view>
+    <!-- <List :blogTxt="blogTxt"/> -->
   </div>
 </template>
 
 <script>
+// import List from "./components/List.vue";
+import blog from "./assets/blog.js";
 
 export default {
   name: 'App',
+  data(){
+    return{
+      blogTxt: blog
+    }
+  },
   components: {
+      // List : List
   }
 }
 </script>
