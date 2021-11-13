@@ -4,7 +4,7 @@
       <div class="profile"></div>
       <span class="profile-name">{{vuestaData.name}}</span>
     </div>
-    <div class="post-body" :style="{backgroundImage:`url(${vuestaData.postImage})`}"></div>
+    <div class="post-body" :style='{backgroundImage:`url(${vuestaData.postImage})`}'></div>
     <div class="post-content">
       <p>{{vuestaData.like}}</p>
       <p><strong>글쓴이아이디</strong>{{vuestaData.content}}</p>
