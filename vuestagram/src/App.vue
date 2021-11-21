@@ -11,7 +11,7 @@
       <img src="./assets/logo.png" class="logo" />
     </div>
 
-    <Container :vuestaData="vuestaData" :step="step" :image="image"/>
+    <Container :vuestaData="vuestaData" :step="step" :image="image" @write="작성한글 = $event"/>
     <button @click="more">더보기</button>
 
     <div class="footer">
@@ -47,6 +47,7 @@ export default {
       더보기 : 0,
       step : 0,
       image : '',
+      작성한글: '',
     }
   },
   components: {
@@ -57,11 +58,11 @@ export default {
       var 내게시물 = {
         name: "Kim Hyun",
         userImage: "https://placeimg.com/100/100/arch",
-        postImage: "https://placeimg.com/640/480/arch",
+        postImage: this.image,
         likes: 36,
         date: "May 15",
         liked: false,
-        content: "내가입력한글 😫",
+        content: this.작성한글,
         filter: "perpetua"
       };
       this.vuestaData.unshift(내게시물);
