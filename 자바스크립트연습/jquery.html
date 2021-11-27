@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow-bg{
+            background: yellow;
+        }
+        .alert-box{
+            background: #aba8f4;
+            color:#4646b4;
+            padding:20px; 
+            border-radius: 5px;
+            display:none;
+            margin-bottom:10px;
+        }
+        .alert-box p {
+            display:inline
+        }
+    </style>
+</head>
+<body>
+    
+    <h4 id="test">안녕하세요</h4>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // $('#test').addClass('yellow-bg')
+        let element = document.getElementById('test');
+        element.classList.add('yellow-bg')
+    </script>
+</body>
+</html>

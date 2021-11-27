@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-box {position: sticky; top:400px;}
+        .card-box img{display:block; margin:0 auto; max-width: 80%;}
+    </style>
+</head>
+<body >
+    <div>
+        <button>버튼</button>
+        <h1>오리얌 사랑해</h1>
+    </div>
+    <div style="height:3000px; margin-top:800px; margin-bottom:1600px">
+        <div class="card-box">
+            <img src="./card1.png" alt="">
+        </div>
+        <div class="card-box">
+            <img src="./card2.png" alt="">
+        </div>
+        <div class="card-box">
+            <img src="./card3.png" alt="">
+        </div>
+        
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            console.log(높이);
+
+            var y = (-1/500) * 높이 + 115/50;
+            var z = (-1/5000) * 높이 + 565/500;
+        
+
+            $('.card-box').eq(0).css('opacity','y').css('transform','scale(${z})')
+        });       
+
+        var 태그 = document.querySelector('h1');
+        var 글씨 = document.querySelector('h1').innerHTML;
+
+        $('button').click(function(){
+            태그.innerHTML = ''
+
+            for(let i = 0; i < 글씨.length; i++){
+                setTimeout(function(){
+                태그.innerHTML = 태그.innerHTML + 글씨[i]
+                },500 * i)
+            }
+        })
+        
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

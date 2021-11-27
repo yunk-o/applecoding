@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card-group container">
+        <div class="card">
+          <img src="https://via.placeholder.com/600">
+          <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : <span>70000</span></p>
+            <button class="btn btn-danger">주문하기</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600">
+          <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : <span>70000</span> </p>
+            <button class="btn btn-danger">주문하기</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600">
+          <div class="card-body">
+            <h5>Card title</h5>
+            <p>가격 : <span>70000</span></p>
+            <button class="btn btn-danger">주문하기</button>
+          </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-danger" id="sortPrice2">가나다순정렬</button>
+        <button class="btn btn-danger" id="sortPrice">가격순정렬</button>
+        <button class="btn btn-danger" id="filterPrice">6만원이하</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        // var array = ['f','e','g','h','jy','t']
+        // array.sort(function(a,b){
+        //     return 'a' < 'b'
+        // });
+      
+        var products = [
+          { id : 0, price : 70000, title : 'Blossom Dress' },
+          { id : 1, price : 50000, title : 'Springfield Shirt' },
+          { id : 2, price : 60000, title : 'Black Monastery' }
+        ]
+
+        // var 어레이 = [7,3,5,2,40];
+        // var 뉴어레이 = 어레이.filter(function(a){
+        //     return a < 4
+        // })
+        $('#sortPrice2').click(function(){
+            products.sort(function(a,b){
+                if(a.title < b.title) return 1;
+                if(a.title > b.title) return -1;
+                if(a.title === b.title) return 0;
+                else return -1;
+            });
+
+            $('.card-body > h5').eq(0).html(products[0].title);
+            $('.card-body span').eq(0).html(products[0].price);
+            $('.card-body > h5').eq(1).html(products[1].title);
+            $('.card-body span').eq(1).html(products[1].price);
+            $('.card-body > h5').eq(2).html(products[2].title);
+            $('.card-body span').eq(2).html(products[2].price);
+        })
+
+
+        $('#sortPrice').click(function(){
+            products.sort(function(a,b){
+                return a.price - b.price
+            });
+
+            $('.card-body > h5').eq(0).html(products[0].title);
+            $('.card-body span').eq(0).html(products[0].price);
+            $('.card-body > h5').eq(1).html(products[1].title);
+            $('.card-body span').eq(1).html(products[1].price);
+            $('.card-body > h5').eq(2).html(products[2].title);
+            $('.card-body span').eq(2).html(products[2].price);
+        })
+
+        // var 뉴어레이 = products.filter(function(a){
+        //     return a.price <= 60000
+        // })
+        
+        $('#filterPrice').click(function(){
+            
+            var 뉴어레이 = products.filter(function(a){
+            return a.price <= 60000
+            })
+        });
+
+
+        $('.card-body > h5').eq(0).html(products[0].title);
+        $('.card-body span').eq(0).html(products[0].price);
+        $('.card-body > h5').eq(1).html(products[1].title);
+        $('.card-body span').eq(1).html(products[1].price);
+        $('.card-body > h5').eq(2).html(products[2].title);
+        $('.card-body span').eq(2).html(products[2].price);
+
+        // function 내용() {
+        //     for (i = 0; i < 3; i++){
+        //         $('.card-body > h5').eq(i).html(products[i].title);
+        //         $('.card-body span').eq(i).html(products[i].price);
+        //     };
+        // };
+        
+        
+       
+
+    </script>
+</body>
+</html>

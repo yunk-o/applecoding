@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box { 
+            /* display:none; */
+            background:darkslategray;
+            color:#fff;
+            padding:10px; 
+            border-radius:5px;
+            margin-bottom:10px
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="show">Alert Box</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="alertOpen('block')">보기</button>
+
+    <button onclick="alertMsg('아이디를 입력하세요')">아이디</button>
+    <button onclick="alertMsg('비밀번호를 입력하세요')">비밀번호</button>
+    
+    <h4 id = 'a'>상품제목</h4>
+    <p id = 'b'>상품내용</p>
+    <p id = 'c'>상품내용</p>
+
+    <script>
+        var array = ['bmw', 520]
+        var obj = {brand : 'bmw' , model : 520}
+
+        var 자료 = [{brand : 'bmw'} , {model : 520}]
+
+        document.getElementById('a').innerHTML = array[0];
+        document.getElementById('b').innerHTML = obj.model;
+        document.getElementById('c').innerHTML = 자료[1].model;
+
+        function alertOpen(e) {
+            document.getElementById('alert').style.display= e;
+        }
+        // alertOpen("block")
+
+        // function alertClose() {
+        //     document.getElementById('alert').style.display='none'
+        // }
+
+        function alertMsg(e){
+            document.getElementById('alert').style.display='block';
+            document.getElementById('show').innerHTML = e;
+        }
+
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display='none';
+        })
+    </script>
+</body>
+</html>
