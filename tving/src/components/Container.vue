@@ -57,7 +57,7 @@
                 </h2>
                 <div>
                     <ul class="col-group name">
-                        <li v-for="(a,i) in Goods01" :key='i'>
+                        <li v-for="(a,i) in Goods01" :key='i' @click="currentTab = i" :class="{active: currentTab === i}">
                             <button @click="step=i" id="click">
                                 <img :src="Goods01[i].smallImage" alt="">
                             </button>
@@ -106,40 +106,39 @@
                     <a class="more" href="#none">더보기</a>
                 </h2>
                 <ul class="col-group name">
-                    <li v-for="(a,i) in Goods01" :key='i'>
-                        <h3 >{{Goods01[i].title}}</h3>
+                    <li v-for="(a,i) in Goods02" :key='i'>
+                        <h3 class="col-group">#{{Goods02[i].leftTitle}}·#{{Goods02[i].rightTitle}}</h3>
                     </li>
                 </ul>
                 <div>
-                    <div class="col-group both">
-                        <div class="left">
-                            <!-- <img :src="Goods01[0].bigImage" alt=""> -->
-                            <div class="img-box">
-                                <img src="https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg" alt="">   
+                    <div v-for="(a,i) in Goods02" :key='i'>
+                        <div class="col-group both" v-if="step==i">
+                            <div class="left">
+                                <!-- <img :src="Goods01[0].bigImage" alt=""> -->
+                                <div class="img-box">
+                                    <img :src="Goods02[i].leftImage" alt="">   
+                                </div>
+                                <div class="txt-box">
+                                    <h3>{{Goods02[i].leftDescription}}</h3>
+                                    <p>{{Goods02[i].leftContents}}</p>
+                                </div>
+                                <!-- <Post :Item = 'Item'/> -->
                             </div>
-                            <div class="txt-box">
-                                <h3>2022 자기님들의 이야기, 새해에도 "You Quiz?"</h3>
-                                <p>'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
-                                    자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.
-                                </p>
+                            <!-- //left -->
+                            <div class="right">
+                                <div class="img-box">
+                                    <img src="https://mall-image.tving.com/media/image/default/2021/11/5c07426738c3b71e334667daaf612379.jpg" alt="">
+                                </div>
+                                <div class="txt-box">
+                                    <h3>{{Goods02[i].leftDescription}}</h3>
+                                    <p>'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
+                                        자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.
+                                    </p>
+                                </div>
+                                <!-- <Post :Item = 'Item'/> -->
                             </div>
-                            <!-- <Post :Item = 'Item'/> -->
+                            <!-- //right -->
                         </div>
-                        <!-- //left -->
-                        <div class="right">
-                            <!-- <img :src="Goods01[0].bigImage" alt=""> -->
-                            <div class="img-box">
-                                <img src="https://mall-image.tving.com/media/image/default/2021/11/5c07426738c3b71e334667daaf612379.jpg" alt="">
-                            </div>
-                            <div class="txt-box">
-                                <h3>2022 자기님들의 이야기, 새해에도 "You Quiz?"</h3>
-                                <p>'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
-                                    자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.
-                                </p>
-                            </div>
-                            <!-- <Post :Item = 'Item'/> -->
-                        </div>
-                        <!-- //right -->
                     </div>
                 </div>
             </div>
@@ -177,6 +176,12 @@
             </div>
         </section>
         <!-- //베스트 리뷰 sec07-->
+        <div>
+            <button class="col-group">
+                <img src="" alt="">
+                <p>티빙몰 인스타그램 바로가기</p>
+            </button>
+        </div>
     </div>
 </template>
 <script>
@@ -187,22 +192,21 @@ export default {
     data(){
         return{
             step: 0,
-            isActive: true,
+            currentTab: 0,
         }
     },
     props: {
         Item: Array,
         Goods01 : Array,
+        Goods02 : Array,
     },
     components:{
         Post : Post,
     },
     methods: {
-        click(){
-            document.getElementById('click').classList.add('click')
            
     
-        },
+        
     }
 }
 </script>
