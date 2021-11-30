@@ -1,29 +1,18 @@
 <template>
   <div class="wrap">
-    <Header/>
-    <div>
-      <img src="./assets/slide01.jpg" alt="">
+    <div class="container">
+      <Header/>
     </div>
-
-    <section>
-      <h3>인기 급상승</h3>
-      <ul class="col-group">
-        <li v-for="a in 5" :key="a">
-          <div><img src="" alt=""></div>
-          <div>
-            <h3><span>[{{yumi}}]스페이스 래빗 인형</span></h3>
-            <h4>25,000</h4>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section>
+    
+   
+    <Container :Item = 'Item' :Goods01= 'Goods01'/>
+    <!-- <section>
       <h3>오늘의 신상</h3>
       <ul class="col-group">
         <li v-for="a in 5" :key="a">
           <div><img src="" alt=""></div>
           <div>
-            <h3><span>[{{yumi}}]스페이스 래빗 인형</span></h3>
+            <h3><span>{{Item[0]}}</span></h3>
             <h4>25,000</h4>
           </div>
         </li>
@@ -69,32 +58,38 @@
         <h3>라켓들고</h3>
         <h4>어서와 , 배드민턴은 처음이지?</h4>
       </div>
-    </section>
-  <Footer/>
+    </section> -->
+    <Footer/>
+    
   </div>
 </template>
 
 <script>
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Container from "./components/Container"
+import Item from "./assets/data.js"
+import Goods01 from "./assets/goods01.js"
+
 
 
 export default {
   name: 'App',
+  data(){
+    return{
+      Item :Item,
+      Goods01 : Goods01,
+    }
+  },
   components: {
     Header : Header,
     Footer : Footer,
-  },
-  data(){
-    return{
-      yumi : '유미의 세포들',
-      goods : ['술꾼도시여자들','힙합 메디컬 시트콤 - EMERGENCY','유미의 세포들','환승연애','여고추리반','미드나이트','아이돌 받아쓰기 대회','샤크 :더 비기닝','스프링캠프'],
-      goods2 : ['#라켓보이즈 · #슬기로운 산촌생활','#DTCU · #갯마을 차차차','#너는 나의 봄 · #악마판사','#보이스 시즌4 · 간 떨어지는 동거','#슬기로운 의사생활 시즌2 · #어느 날 우리 집 현관으로 멸망이 들어왔다 ']
-    }
+    Container : Container,
   },
 }
 </script>
 
 <style>
-.col-group {display:flex}
+  @import './assets/css/common.css';
+  @import './assets/css/style.css';
 </style>

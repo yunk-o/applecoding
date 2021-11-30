@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {font-family: 'SBAggroB';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');font-weight: normal;font-style: normal;}
+/*===========================================================================
+	CSS 초기화
+============================================================================*/
+* {font-family: 'SBAggroB', 'Open Sans' ,sans-serif;  box-sizing:border-box; margin:0; padding:0; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section, video, a {border:0; outline:0; font-size:100%; color:#222; line-height:1;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+ul, ol, li {list-style:none;}
+strong {display: inline-block;}
+a {margin:0; padding:0; font-size:100%; }
+table {border-collapse:collapse; border-spacing:0;}
+input, select {vertical-align:middle;}
+p {line-height:1.5;}
+img {width: 100%; object-fit: cover;}
+span {display: inline-block;}
+input {padding:8px; outline:none;}
+label {font-size:18px;}
+button {cursor:pointer; border:0; background:none; color:#000}
+a {text-decoration: none;}
+input[type="text"], input[type="password"],input[type="email"], button, textarea {border:1px solid #e1e1e1; appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0;}
+textarea {resize: none; padding:14px; font-size: 16px;}
+.col-group {display:flex; align-items: center;}
+::placeholder {color:#bdbdbd}
+
+/*===========================================================================
+	CSS 초기화
+============================================================================*/
+header {
+    width:1240px;
+    margin:0 auto;
+    padding-top:1px;
+}
+header .logo {
+    width:240px
+}
+header .top {
+    margin-top:40px;
+    justify-content: space-between;
+}
+header .search-box {
+    position: relative;
+    width:670px;
+    height:44px;
+    padding-left: 20px;
+    border: 1px solid #d8d8d8;
+    border-radius: 25px;
+}
+header .search-box input {
+    height:42px;
+    padding:10px 0;
+    border:none
+}
+header .search-box button {
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px;
+    border:none;
+}
+header .search-box img {
+    width:20px;
+}
+header .btn-box {
+    gap:30px
+}
+header img { 
+    width:100%;
+}
+header .menu {
+    justify-content: space-between;
+    margin-top:40px;
+    gap:100px;
+}
+header .menu .left {
+    position: relative;
+    gap:40px;
+}
+header .menu .left::after {
+    position: absolute;
+    content: '';
+    top:0px;
+    right:-50px; 
+    width: 2px;
+    height:15px;
+    background:#bdbdbd;
+}
+header .menu .right {
+    gap:40px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
