@@ -4,11 +4,16 @@ import Home from "./components/Home.vue"
 import Detail from "./components/Detail.vue"
 import Author from "./components/Author.vue"
 import Comment from "./components/Comment.vue"
+import Swiper from "./components/Swiper.vue"
 
 const routes = [
   {
     path: "/list",
     component: List,
+  },
+  {
+    path: "/swiper",
+    component: Swiper,
   },
   {
     path: "/home",

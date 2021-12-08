@@ -11,22 +11,18 @@
       <img src="./assets/logo.png" class="logo" />
     </div>
 
-    <Container :vuestaData="vuestaData" :step="step" :image="image" @write="작성한글 = $event"/>
-    <button @click="more">더보기</button>
+
+    <Container :프로필='프로필' :좋아요='좋아요' :vuestaData="vuestaData" :step="step" :image="image" @write="작성한글 = $event"/>
+    <button v-if="step == 1" @click="more">더보기</button>
 
     <div class="footer">
       <ul class="footer-button-plus">
-        <input @change="upload" type="file" id="file" class="inputfile" />
+        <input @change="upload" multiple accept="image/*" type="file" id="file" class="inputfile" />
         <label for="file" class="input-plus">+</label>
       </ul>
     </div>
 
-    <!-- <div v-if="step==0">내용1</div>
-    <div v-if="step==1">내용2</div>
-    <div v-if="step==2">내용3</div>
-    <button @click="step=0">버튼1</button>
-    <button @click="step=1">버튼2</button>
-    <button @click="step=2">버튼3</button> -->
+
 
   </div>
 
@@ -36,6 +32,7 @@
 <script>
 import Container from "./components/Container.vue"
 import vuestaData from "./assets/data.js"
+//서버 가지고 오는거 *설치해야됨 npm add axios
 import axios from "axios"
 axios.post()
 
@@ -48,22 +45,35 @@ export default {
       step : 0,
       image : '',
       작성한글: '',
+      선택한필터 : '',
+      좋아요 : [0,0,0],
+      프로필 : '',
+
     }
+  },
+  mounted(){
+      this.emitter.on('박스클릭함', (a)=>{
+      this.선택한필터 = a
+    })
   },
   components: {
     Container: Container
   },
   methods : {
+    now(){
+      return new Date()
+    },
+    
     publish(){
       var 내게시물 = {
         name: "Kim Hyun",
-        userImage: "https://placeimg.com/100/100/arch",
+        userImage: `https://e7.pngegg.com/pngimages/304/275/png-clipart-user-profile-computer-icons-profile-miscellaneous-logo-thumbnail.png`,
         postImage: this.image,
-        likes: 36,
+        likes: this.좋아요++,
         date: "May 15",
-        liked: false,
+        liked: true,
         content: this.작성한글,
-        filter: "perpetua"
+        filter: this.선택한필터
       };
       this.vuestaData.unshift(내게시물);
       this.step = 0

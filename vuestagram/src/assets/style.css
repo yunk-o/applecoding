@@ -86,10 +86,26 @@ ul {
     border-left: 1px solid #eee;
 }
 
+.post {
+    margin-bottom:50px;
+}
+
+.post-header {
+    width:100%;
+    align-items: center;
+}
+
 .post-body {
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.profile-img {
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    margin-right:10px;
 }
 
 .upload-image {

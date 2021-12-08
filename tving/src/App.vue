@@ -3,11 +3,13 @@
     <div class="container">
       <Header/>
     </div>
-     
-    <Container :Item = 'Item' :Goods01= 'Goods01' :Goods02= 'Goods02'/>
-   
+    
+    <Container :Item = 'Item' :Goods01= 'Goods01' :Goods02= 'Goods02'>
+    <router-view to = "./login">ddd</router-view>
+    </Container>
     <Footer/>
     
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
@@ -35,6 +37,8 @@ export default {
     Footer : Footer,
     Container : Container,
   },
+  
+
 }
 </script>
 

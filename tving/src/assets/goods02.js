@@ -7,7 +7,7 @@ export default [
         자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.`,
 
         rightTitle:'어서와조이',
-        rightImage: "https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg",
+        rightImage: "https://mall-image.tving.com/media/image/default/2021/11/5c07426738c3b71e334667daaf612379.jpg",
         rightDescription:'행복 찾아 떠나는 대환장 명랑 코믹 로맨스',
         rightContents: `행복 찾아 직진! 미식가 허당 도령 이언과 기별부인 조이의 꽃내음 가득한 조선 인생 2막 모험! 
         어서와조이를 재해석한 해빗 작가의 일러스트로 제작한 그립톡 납시오~♥`
@@ -47,32 +47,6 @@ export default [
         rightImage: "https://mall-image.tving.com/media/image/default/2021/10/2c5ab1f3b66697a740d86eeabbfceea8.jpg",
         rightDescription:'사랑이 일렁이는 갯마을, MUST GET-CHA!',
         rightContents: `식혜처럼 달달하고 시원한 공진살이 필수템! 바다 내음 물~씬 풍기는 청량한 디자인은 물론 몸과 마음까지 건강해지는 러블리 갯마을 굿즈 GET!`
-    },
-    {
-        leftTitle:'유 퀴즈 온 더 블럭',
-        leftImage: "https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg",
-        leftDescription:'2022 자기님들의 이야기, 새해에도 "You Quiz?"',
-        leftContents: `'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
-        자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.`,
-
-        rightTitle:'어서와조이',
-        rightImage: "https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg",
-        rightDescription:'행복 찾아 떠나는 대환장 명랑 코믹 로맨스',
-        rightContents: `행복 찾아 직진! 미식가 허당 도령 이언과 기별부인 조이의 꽃내음 가득한 조선 인생 2막 모험! 
-        어서와조이를 재해석한 해빗 작가의 일러스트로 제작한 그립톡 납시오~♥`
-    },
-    {
-        leftTitle:'유 퀴즈 온 더 블럭',
-        leftImage: "https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg",
-        leftDescription:'2022 자기님들의 이야기, 새해에도 "You Quiz?"',
-        leftContents: `'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
-        자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.`,
-
-        rightTitle:'어서와조이',
-        rightImage: "https://mall-image.tving.com/media/image/default/2021/11/844563d86bcfef2c709f53cd26be5a33.jpg",
-        rightDescription:'행복 찾아 떠나는 대환장 명랑 코믹 로맨스',
-        rightContents: `행복 찾아 직진! 미식가 허당 도령 이언과 기별부인 조이의 꽃내음 가득한 조선 인생 2막 모험! 
-        어서와조이를 재해석한 해빗 작가의 일러스트로 제작한 그립톡 납시오~♥`
     }
 
 ]

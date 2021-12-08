@@ -1,17 +1,18 @@
 <template>
-    <ul class="items col-group">
-        <li  v-for="(a,i) in 5" :key="i" :Item = 'Item'>
-            <a href="">
-                <div class="img-box">
-                    <img :src="Item[i].userImage" alt="">
+    <div class="item">
+        <a href="">
+            <div class="img-box">
+                <img :src="Item.userImage" alt="">
+            </div>
+            <div class="col-group txt-box">
+                <div class="best">{{Item.id}}</div>
+                <div class="txt">
+                    <h3 class="name">{{Item.name}}</h3>
+                    <h4 class="price">{{Item.price}}</h4>
                 </div>
-                <div>
-                    <h3 class="name">{{Item[i].name}}</h3>
-                    <h4 class="price">{{Item[i].price}}</h4>
-                </div>
-            </a>
-        </li>
-    </ul> 
+            </div>
+        </a>
+    </div>
 </template>
 <script>
 export default {

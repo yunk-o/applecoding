@@ -77,6 +77,22 @@
     width:185px;
     background-color: #e3d2fc;
 }
+.sec03 .items {
+    flex-wrap:wrap;
+    gap:40px
+}
+.sec03 .items .txt-box {
+    align-items: flex-start;
+}
+.sec03 .items .item .name {
+    font-size:14px
+}
+.sec03 .items .item .best {
+    display:block;
+    font-size:40px;
+    margin-right:20px;
+    font-style: italic;
+}
 .banner {
     width:100%; 
     object-fit:contain;
@@ -89,35 +105,39 @@
     width:238px;
     background-color: #dadaf5;
 }
+.sec05 .items .img-box {
+    height:200px
+}
 .sec06{
     background:#faefef;
 }
 .sec06 h2 span {
-    width:238px;
+    width:278px;
     background-color: #f5dada;
 }
 .sec07{
     background:#f4f4f4;
 }
 .sec07 h2 span {
-    width:238px;
+    width:208px;
     background-color: #e6e6e6;
 }
 .sec04 .name {
     gap:40px;
-    border-bottom: 1px solid #dbdbdb;
 }
 .sec04 .name button {
-    width:100%; 
+    width:118px;
+    height:118px;
     border:0;
 }
-.click {
+.sec04 .name .active button {
+    content:'';
     border:7px solid red;
     border-radius: 100%;
 }
 .sec04 .name img {
-    width:118px;
-    height:118px;
+    width:100%;
+    height:100%;
 }
 .sec04 .name h3 {
     width:100%;
@@ -160,21 +180,43 @@
 .sec04 .right .profile .txt-box p{
     color:#a2a2a2;
 }
-/* .sec04 .right .cont-box {
-    margin-bottom:20px
-} */
 .sec04 .right .cont-box h4 {
     padding-bottom:20px; 
     font-size:18px;
 }
 .sec04 .right .cont-box p {
-    padding-bottom:20px; 
+    padding-bottom:10px; 
     color:#666;
 }
 .sec04 .right .cont-box p span{
-    padding-bottom:20px; 
+    border-bottom:1px solid #dbdbdb;
     color:#3a76e2;
     margin-right:10px
+}
+.sec04 .right .items {
+    margin-top:15px;
+    gap:40px
+}
+.sec04 .right .items .name {
+    font-size:14px
+}
+.sec05 .name {
+    margin-bottom:20px
+}
+.sec05 .name h3{
+    font-size:20px;
+    color:#b3b3b3
+}
+.sec05 .name button {
+    border:0
+}
+.sec05 .name .active {
+    border:7px solid #b3b3b3;
+    border-radius: 20px; 
+    padding:5px 20px;
+}
+.sec05 .name .active h3 {
+    color:#000
 }
 .sec05 .both {
     gap:40px
@@ -197,7 +239,14 @@
 .sec05 .txt-box h3 {
     padding-bottom:20px;
 } 
-.sec05 .items li .img-box {
+.sec05 .items {
+    gap:40px
+}
+.sec05 .items .item .name {
+    font-size:14px;
+    padding-bottom:0
+}
+.sec05 .items .img-box {
     height: 200px;
 } 
 .main-slide {
@@ -210,17 +259,17 @@
     align-items: flex-start;
     gap:60px;
 }
-.items li {
+.items .item {
     width:232px;
 }
-.items li .img-box {
+.items .item .img-box {
     margin-bottom:15px
 }
-.items li img {
+.items .item img {
     width:100%;
     border-radius:20px;
 }
-.items li .name {
+.items .item .name {
     width:100%;
     font-family:'Open Sans';
     font-size:16px;
@@ -237,8 +286,38 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.items li .price {
+.items .item .price {
     font-weight: 800;
     font-size: 20px;
     color:#202020;
+}
+.items .item .best {
+    display:none
+}
+.review {
+    width:100%;
+}
+.review .top img{
+    width:50%
+}
+.review .bottom {
+    background: #3f94a5;
+    justify-content: center;
+    padding:15px 0
+}
+.review .bottom p {
+    color:#fff;
+    padding-right:20px
+}
+.review .bottom a {
+    color:#fff
+}
+.btn-insta {
+    width:100%; 
+    margin:50px 0;
+}
+.btn-insta button{
+    padding:15px 50px;
+    border-radius:20px;
+    margin:0 auto
 }

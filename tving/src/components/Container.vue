@@ -14,7 +14,9 @@
                     <span class="title-bg"></span>
                     <a class="more" href="#none">더보기</a>
                 </h2>
-                <Post :Item = 'Item'/>
+                <div class="items col-group">
+                    <Post  v-for="(a,i) in 5" :key="i" :Item = 'Item[i]'/>
+                </div>
             </div>
         </section>
         <!-- //인기 급상승 sec01-->
@@ -26,7 +28,9 @@
                     <span class="title-bg"></span>
                     <a class="more" href="#none">더보기</a>
                 </h2>
-                <Post :Item = 'Item'/>
+                <div class="items col-group">
+                    <Post  v-for="(a,i) in 5" :key="i" :Item = 'Item[i]'/>
+                </div> 
             </div>
         </section>
         <!-- //오늘의 신상 sec02-->
@@ -38,7 +42,9 @@
                     <span class="title-bg"></span>
                     <a class="more" href="#none">더보기</a>
                 </h2>
-                <Post v-for="(a,i) in 2" :key='i' :Item = 'Item'/>
+                <div class="items col-group">
+                    <Post  v-for="(a,i) in 10" :key="i" :Item = 'Item[i]'/>
+                </div>
             </div>
         </section>
         <!-- //BEST 10 sec03-->
@@ -58,7 +64,7 @@
                 <div>
                     <ul class="col-group name">
                         <li v-for="(a,i) in Goods01" :key='i' @click="currentTab = i" :class="{active: currentTab === i}">
-                            <button @click="step=i" id="click">
+                            <button @click="step=i">
                                 <img :src="Goods01[i].smallImage" alt="">
                             </button>
                             <h3 >{{Goods01[i].title}}</h3>
@@ -87,7 +93,9 @@
                                     <p>
                                         <span>{{Goods01[i].tag[0]}} {{Goods01[i].tag[1]}} {{Goods01[i].tag[2]}} {{Goods01[i].tag[3]}}</span>    
                                     </p>
-                                    <Post :Item = 'Item'/>
+                                    <div class="items col-group">
+                                        <Post  v-for="(a,i) in 3" :key="i" :Item = 'Item[i]'/>
+                                    </div>
                                 </div>
                             </div>
                             <!-- //right -->
@@ -106,15 +114,16 @@
                     <a class="more" href="#none">더보기</a>
                 </h2>
                 <ul class="col-group name">
-                    <li v-for="(a,i) in Goods02" :key='i'>
-                        <h3 class="col-group">#{{Goods02[i].leftTitle}}·#{{Goods02[i].rightTitle}}</h3>
+                    <li v-for="(a,i) in Goods02" :key='i' @click="currentTab = i" :class="{active: currentTab === i}">
+                        <button @click="step=i">
+                            <h3 class="col-group">&nbsp;#{{Goods02[i].leftTitle}}&nbsp;·&nbsp;#{{Goods02[i].rightTitle}}&nbsp;</h3>
+                        </button>
                     </li>
                 </ul>
                 <div>
                     <div v-for="(a,i) in Goods02" :key='i'>
                         <div class="col-group both" v-if="step==i">
                             <div class="left">
-                                <!-- <img :src="Goods01[0].bigImage" alt=""> -->
                                 <div class="img-box">
                                     <img :src="Goods02[i].leftImage" alt="">   
                                 </div>
@@ -122,20 +131,22 @@
                                     <h3>{{Goods02[i].leftDescription}}</h3>
                                     <p>{{Goods02[i].leftContents}}</p>
                                 </div>
-                                <!-- <Post :Item = 'Item'/> -->
+                                <div class="items col-group">
+                                    <Post  v-for="(a,i) in 3" :key="i" :Item = 'Item[i]'/>
+                                </div>
                             </div>
                             <!-- //left -->
                             <div class="right">
                                 <div class="img-box">
-                                    <img src="https://mall-image.tving.com/media/image/default/2021/11/5c07426738c3b71e334667daaf612379.jpg" alt="">
+                                    <img :src="Goods02[i].rightImage" alt=""> 
                                 </div>
                                 <div class="txt-box">
-                                    <h3>{{Goods02[i].leftDescription}}</h3>
-                                    <p>'저마다 써 내려간 인생 드라마의 주연들, 어쩌면 당신의 이야기.' 자기님의. 자기님에 의한,
-                                        자기님을 위한 긍정 에너지 가득 일기장! 2022 자기님들의 이야기를 담아보세요.
-                                    </p>
+                                    <h3>{{Goods02[i].rightDescription}}</h3>
+                                    <p>{{Goods02[i].rightContents}}</p>
                                 </div>
-                                <!-- <Post :Item = 'Item'/> -->
+                                <div class="items col-group">
+                                    <Post  v-for="(a,i) in 3" :key="i" :Item = 'Item[i]'/>
+                                </div>
                             </div>
                             <!-- //right -->
                         </div>
@@ -151,16 +162,18 @@
                     <span class="title-bg"></span>
                     <a class="more" href="#none">더보기</a>
                 </h2>
-                <Post :Item = 'Item'/>
+                <div class="items col-group">
+                    <Post  v-for="(a,i) in 5" :key="i" :Item = 'Item[i]'/>
+                </div>
             </div>
         </section>
         <!-- //클리언런스 세일 sec06-->
         <section class="review">
-            <div class="col-group">
+            <div class="col-group top">
                 <img src="https://mall-image.tving.com/media/image/default/2021/06/a2eaa9e5c13e608ca87ee2d516e2ae4f.png" alt="">
                 <img src="https://mall-image.tving.com/media/image/default/2021/06/0ae54ea980215c97b8f54597e16cdc57.png" alt="">
             </div>
-            <div class="col-group">
+            <div class="col-group bottom">
                 <p><img src="" alt="">REVIEW</p>
                 <a href="">리뷰 쓰러 가기 ></a>
             </div>
@@ -172,13 +185,14 @@
                     <span class="title-bg"></span>
                     <a class="more" href="#none">더보기</a>
                 </h2>
-                <Post :Item = 'Item'/>
+                <div class="items col-group">
+                    <Post  v-for="(a,i) in 5" :key="i" :Item = 'Item[i]'/>
+                </div>
             </div>
         </section>
         <!-- //베스트 리뷰 sec07-->
-        <div>
+        <div class="btn-insta">
             <button class="col-group">
-                <img src="" alt="">
                 <p>티빙몰 인스타그램 바로가기</p>
             </button>
         </div>
@@ -203,11 +217,6 @@ export default {
     components:{
         Post : Post,
     },
-    methods: {
-           
-    
-        
-    }
 }
 </script>
 <style>

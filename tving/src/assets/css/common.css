@@ -90,7 +90,38 @@ header .menu .left::after {
 header .menu .right {
     gap:40px;
 }
-
+footer {
+    background:#212121 ;
+    padding:20px
+}
+footer .f-menu {
+    gap:15px;
+    border-bottom:1px solid #929292;
+    padding-bottom:15px
+}
+footer .f-menu a {
+    color:#fff;
+    font-size:14px;
+}
+footer ul {
+    flex-wrap: wrap;
+    padding-top:15px
+}
+footer p {
+    white-space: nowrap;
+    color:#fff;
+    font-family: 'opensans';
+    font-size:13px;
+    color:#929292;
+}
+footer h3 {
+    white-space: nowrap;
+    color:#fff;
+    font-family: 'opensans';
+    font-size:13px;
+    color:#929292;
+    padding-top:30px
+}
 .swiper {
     width: 100%;
     height: 100%;

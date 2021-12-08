@@ -7,7 +7,7 @@
           <button><img src="../assets/icon_search.png" alt=""></button>
         </div>
         <div class="col-group btn-box">
-          <router-link >로그인</router-link>
+          <router-link to="./login">로그인</router-link>
           <router-link >회원가입</router-link>
           <router-link ><img src="../assets/icon_cart.png" alt=""></router-link>
         </div>
