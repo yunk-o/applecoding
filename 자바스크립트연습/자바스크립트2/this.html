@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="button"></button>
+    </div>
+    <script>
+        'use strict';
+        //자바스크립트를 엄격하게 사용 (스트릭트 모드)
+
+        console.log(this)
+        //this가 가르키는 것 1.window
+
+        function a(){
+            console.log(this);
+        }
+        a()
+        //this가 가르키는 것 1.window 2.스트릭트모드에서는 undefind
+
+        var object = {
+            data : 'OH',
+            fun : function(){
+                console.log(this.data)
+            }
+        }
+
+        object.fun()
+        //this 2.오브젝트 내 함수안에서 쓰면 그 함수를 가지고 있는 오브젝트를 뜻함
+
+        var obj = {
+            data : {
+                함수 : ()=> {
+                    console.log(this.data)
+                },
+                함수2(){
+                    console.log(this.data)
+                }
+                //똑같음
+            }
+        }
+        //arrowFunction 특징 : this값을 함수밖에 있던거 그대로 씀
+
+        function 기계(){
+            this.이름 = 'Kim';
+        }
+        var 오브젝트 = new 기계();
+        //여기서의 this는 기계로부터 새로 생성될 오브젝트들을 의미. 
+
+        document.getElementById('button').addEventListener('click', function(e){
+            console.log(this)
+        });
+        //e.currentTarget은 지금 이벤트가 동작하는 곳  document.getElementById('button')
+
+        var 오브젝트 = {
+            이름들 : ['김', '이', '박'],
+            함수 : function(){
+                console.log(this)
+                오브젝트.이름들.forEach(()=>{
+                    console.log(this)
+                });
+            }
+        }
+        //arrow function을 사용하면 위에 있는 this값을 그대로 가져옴
+        오브젝트.함수();
+
+        [1,2,3,4].forEach(a=>
+        console.log(a))
+    </script>
+</body>
+</html>
