@@ -1,10 +1,20 @@
 <template>
     <div>
+
         <div class="container">
             <div class="main-slide">
-                <a href="">
-                    <img src="https://mall-image.tving.com/media/image/default/2021/11/a5f2d918f2ef870482d52dd106eb0a18.jpg" alt="">
-                </a>
+                <Carousel :autoplay="4000" :wrap-around="true">
+                <Slide v-for="slide in 10" :key="slide">
+                    <div class="carousel__item">
+                    
+                    </div>
+                </Slide>
+
+                <template #addons>
+                    <Navigation />
+                    <Pagination />
+                </template>
+                </Carousel>
             </div>
         </div>
         <section class="sec sec01">
@@ -132,7 +142,7 @@
                                     <p>{{Goods02[i].leftContents}}</p>
                                 </div>
                                 <div class="items col-group">
-                                    <Post  v-for="(a,i) in 3" :key="i" :Item = 'Item[i]'/>
+                                    <Post  v-for="(a,i) in 4" :key="i" :Item = 'Item[i]'/>
                                 </div>
                             </div>
                             <!-- //left -->
@@ -145,7 +155,7 @@
                                     <p>{{Goods02[i].rightContents}}</p>
                                 </div>
                                 <div class="items col-group">
-                                    <Post  v-for="(a,i) in 3" :key="i" :Item = 'Item[i]'/>
+                                    <Post  v-for="(a,i) in 4" :key="i" :Item = 'Item[i]'/>
                                 </div>
                             </div>
                             <!-- //right -->
@@ -186,22 +196,51 @@
                     <a class="more" href="#none">더보기</a>
                 </h2>
                 <div class="items col-group">
-                    <Post  v-for="(a,i) in 5" :key="i" :Item = 'Item[i]'/>
+                    <div class="item" v-for="(a,i) in 4" :key="i">
+                        <div class="img-box">
+                            <img :src="Item[i].userImage" alt="">
+                        </div>
+                        <div class="txt-box">
+                            <div class="box">
+                                <div class="col-group">
+                                    <img v-for="a in 5" :key='a'  class="star" src="../assets/images/star.png" alt="">
+                                </div>
+                                <h3>상품후기</h3>
+                                <p>아이가 좋아하네요. 가격도 착하고 잘 산것 같습니다.아이가 좋아하네요. 가격도 착하고 잘 산것 같습니다.</p>
+                                <span>심**</span>
+                            </div>
+
+                            <div class="col-group mini-item">
+                                <div class="left"><img :src="Item[i].userImage" alt=""></div>
+                                <div class="txt">
+                                    <h3 class="name">{{Item[i].name}}</h3>
+                                    <h4 class="price">{{Item[i].price}}</h4>
+                                </div>
+                            </div>
+                            <!-- //mini-item -->
+                        </div>
+                        <!-- //txt-box -->
+                    </div>
                 </div>
+                <!-- //items -->
             </div>
         </section>
         <!-- //베스트 리뷰 sec07-->
         <div class="btn-insta">
-            <button class="col-group">
+            <a href="https://www.instagram.com/tvingmall.official/" class="col-group">
+                <img src="../assets/images/insta.png" alt="">
                 <p>티빙몰 인스타그램 바로가기</p>
-            </button>
+            </a>
         </div>
     </div>
 </template>
 <script>
 import Post from "./Post.vue"
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 // import Goods01 from "./Goods01.vue"
-export default {
+export default defineComponent({
     name: 'Container',
     data(){
         return{
@@ -216,8 +255,12 @@ export default {
     },
     components:{
         Post : Post,
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
     },
-}
+})
 </script>
 <style>
  

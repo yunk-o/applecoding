@@ -6,12 +6,12 @@
       </div>
       <span class="profile-name">{{vuestaData.name}}</span>
     </div>
-    <div @click="$store.commit('좋아요')" :class="vuestaData.filter" class="post-body" :style='{backgroundImage:`url(${vuestaData.postImage})`}'>
+    <div @click="$store.commit('liked')" :class="vuestaData.filter" class="post-body" :style='{backgroundImage:`url(${vuestaData.postImage})`}'>
       
     </div>
     <div class="post-content">
-      <p>{{$store.state.likes}} Likes <button @click="$store.commit('좋아요')">버튼</button> </p>
-      <p><strong>글쓴이아이디</strong>{{vuestaData.content}}</p>
+      <p><button class="btn-like" @click="$store.commit('liked')">꾹</button>{{$store.state.likes}} Likes  </p>
+      <p>{{vuestaData.content}}</p>
       <p class="date">{{vuestaData.date}}</p>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   name: "Post",
     props: {
       vuestaData : Array,
-      좋아요 : Number,
+      liked : Number,
     },
 };
 </script>

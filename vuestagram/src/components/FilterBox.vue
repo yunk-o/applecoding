@@ -1,5 +1,5 @@
 <template>
-    <div @click="fire" :class="필터" class="filter-item" :style="`background-image:url(${image})`"> 
+    <div @click="fire" :class="eachFilter" class="filter-item" :style="`background-image:url(${image})`"> 
         <slot></slot>    
     </div> 
 </template>
@@ -14,11 +14,11 @@ export default {
     },
     props : {
         image :String,
-        필터 : String,
+        eachFilter : String,
     },
     methods: {
         fire(){
-            this.emitter.emit('박스클릭함', this.필터)
+            this.emitter.emit('boxCilck', this.eachFilter)
         }   
     }
 }
@@ -31,7 +31,8 @@ export default {
     margin: 10px 10px 10px auto;
     padding: 8px;
     display: inline-block;
-    color : white;
+    color : black;
+    text-align: center;
     background-size: cover;
     background-position : center;
 }

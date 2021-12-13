@@ -79,7 +79,6 @@
 }
 .sec03 .items {
     flex-wrap:wrap;
-    gap:40px
 }
 .sec03 .items .txt-box {
     align-items: flex-start;
@@ -238,17 +237,112 @@
 }
 .sec05 .txt-box h3 {
     padding-bottom:20px;
+    font-size:22px;
 } 
+.sec05 .txt-box p {
+    font-size:16px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    padding-bottom:20px;
+}
 .sec05 .items {
-    gap:40px
+    gap:15px;
 }
 .sec05 .items .item .name {
+    font-size:12px;
+    padding-bottom:0;
+}
+.sec05 .items .item .price {
     font-size:14px;
-    padding-bottom:0
 }
 .sec05 .items .img-box {
     height: 200px;
 } 
+.sec07 .items {
+    width:100%;
+    gap: 30px;
+    justify-content: space-between;
+}
+.sec07 .items .item {
+    width:calc(100% / 4 - 22.5px);
+    height:500px;
+    background:#fff;
+    border-radius:20px
+}
+.sec07 .items .item .img-box {
+    height:200px;
+    margin-bottom:0;
+}
+.sec07 .items .item .img-box img{
+    height:100%;
+    border-radius:20px 20px 0 0
+}
+.sec07 .items .item .txt-box {
+    padding:20px;
+}
+.sec07 .items .item .txt-box .box {
+    height:150px;
+}
+.sec07 .items .item .txt-box .star {
+    width:15px;
+    margin-bottom:10px;
+}
+.sec07 .items .item .txt-box h3 {
+    padding-bottom:10px
+}
+.sec07 .items .item .txt-box p {
+    font-size:12px;
+    font-family: 'Open Sans';
+    padding-bottom:40px;
+    width: 100%;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #202020;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.sec07 .items .item .txt-box span {
+    font-size:12px;
+    font-family: 'Open Sans';
+}
+.items .item .mini-item {
+    margin-top:20px;
+    padding-top:20px;
+    align-items:flex-start;
+    border-top:1px solid #e5e5e5
+}
+.items .item .mini-item .left {
+    width:70px
+}
+.items .item .mini-item .txt {
+    width:calc(100% - 70px)
+}
+.items .item .mini-item .txt .name {
+    width:calc(100% - 20px);
+    display:block;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+.items .item .mini-item .txt .price {
+    font-size:14px
+}
+.items .item .mini-item img{
+    width: 55px;
+    height: 55px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50px;
+    object-fit: cover;    
+}
+.items .item .mini-item .name {
+    font-size:12px
+}
 .main-slide {
     margin-bottom:50px;
 }
@@ -315,9 +409,72 @@
 .btn-insta {
     width:100%; 
     margin:50px 0;
+    text-align: center;
 }
-.btn-insta button{
+.btn-insta a{
+    width:350px;
+    justify-content:center;
     padding:15px 50px;
     border-radius:20px;
-    margin:0 auto
+    margin:0 auto; 
+    border:1px solid #ccc
+}
+.btn-insta a img {
+    width:30px; 
+    height:30px;
+    margin-right:10px
+}
+.carousel__item {
+    height:540px
+}
+.carousel__slide {
+    height:100%; 
+    background-size:contain;
+    border-radius:20px;
+    margin-bottom:20px
+}
+.carousel__prev, .carousel__next {
+    width:50px;
+    height:50px;
+    background: #aaa;
+}
+.carousel__pagination-button{
+    background: #aaa;
+}
+.carousel__pagination-button--active {
+    background:#555;
+}
+.carousel__prev svg, .carousel__next svg {
+    width:40px; 
+    height:40px
+}
+.carousel__slide:nth-child(1) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/11/a5f2d918f2ef870482d52dd106eb0a18.jpg);
+}
+.carousel__slide:nth-child(2) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/12/cbebbe1c4ddeb4e50bdee08b1a2d6b9d.jpg);
+}
+.carousel__slide:nth-child(3) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/12/cad12eb50288ca10f2f4069f466d173f.jpg);
+}
+.carousel__slide:nth-child(4) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/11/f827a6fe80ed41f8832438c6653e9a14.jpg);
+}
+.carousel__slide:nth-child(5) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/11/b02fbb9787d78cd0b8517db1bde99ac7.jpg);
+}
+.carousel__slide:nth-child(6) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/11/ed174c222b8165eb50e72ac2d547788d.jpg);
+}
+.carousel__slide:nth-child(7) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/11/87fd21c66879b037aab0cb4ea7c91e19.jpg);
+}
+.carousel__slide:nth-child(8) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/10/0509f3b39b148a914ead45126650ecac.jpg);
+}
+.carousel__slide:nth-child(9) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/10/1c7b636942ae13dae26323d4b302375a.jpg);
+}
+.carousel__slide:nth-child(10) {
+    background: url(https://mall-image.tving.com/media/image/default/2021/09/f1f398019f006ba53d3537324c5ae0cb.jpg);
 }

@@ -18,12 +18,15 @@ ul {
 }
 
 .header {
+    z-index:1;
+    position: fixed;
     width: 100%;
     height: 40px;
     background-color: white;
     padding-bottom: 8px;
     position: sticky;
     top: 0;
+    border-bottom:1px solid #eee
 }
 
 .header-button-left {
@@ -48,7 +51,8 @@ ul {
     position: sticky;
     bottom: 0;
     padding-bottom: 10px;
-    background-color: white;
+    border:1px solid #eee;
+    background: #fff;
 }
 
 .footer-button-plus {
@@ -72,6 +76,7 @@ ul {
 
 .input-plus {
     cursor: pointer;
+    font-size:14px;
 }
 
 #app {
@@ -85,7 +90,22 @@ ul {
     border-right: 1px solid #eee;
     border-left: 1px solid #eee;
 }
-
+.more {
+    width:100%; 
+    text-align: center;
+}
+.more button {
+    width:200px;
+    margin:0 auto;
+    text-align: center;
+    padding:15px;
+    border-radius:10px;
+    font-size:14px;
+    border:0;
+    background: #87ceed;
+    margin-bottom:20px;
+    color: #fff;
+}
 .post {
     margin-bottom:50px;
 }
@@ -93,25 +113,37 @@ ul {
 .post-header {
     width:100%;
     align-items: center;
+    padding:10px
 }
-
+.post-content {
+    padding:0 10px
+}
 .post-body {
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .profile-img {
     width:30px;
     height:30px;
     border-radius: 100%;
     margin-right:10px;
 }
-
+.btn-like {
+    width:30px; 
+    height:30px; 
+    border-radius: 100%;
+    font-size: 14px;
+    white-space: nowrap;
+    background: #87ceed;
+    border:0;
+    margin-right: 10px;
+    color:#fff
+}
 .upload-image {
     width: 100%;
     height: 450px;
-    background: cornflowerblue;
+    background: white;
     background-size: cover;
 }
 
@@ -156,4 +188,7 @@ ul {
     margin: auto;
     display: block;
     outline: none;
+}
+.write-box::placeholder {
+    font-family: "consolas";
 }

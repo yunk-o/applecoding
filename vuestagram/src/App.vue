@@ -12,13 +12,15 @@
     </div>
 
 
-    <Container :프로필='프로필' :좋아요='좋아요' :vuestaData="vuestaData" :step="step" :image="image" @write="작성한글 = $event"/>
-    <button v-if="step == 1" @click="more">더보기</button>
+    <Container :profile='profile' :liked='liked' :vuestaData="vuestaData" :step="step" :image="image" @write="write = $event"/>
+    <div class="more">
+      <button v-if="step == 0" @click="more">더보기</button>
+    </div>
 
-    <div class="footer">
+    <div class="footer" v-if="step == 0">
       <ul class="footer-button-plus">
         <input @change="upload" multiple accept="image/*" type="file" id="file" class="inputfile" />
-        <label for="file" class="input-plus">+</label>
+        <label for="file" class="input-plus">글 작성하기</label>
       </ul>
     </div>
 
@@ -41,19 +43,19 @@ export default {
   data(){
     return{
       vuestaData : vuestaData,
-      더보기 : 0,
+      moreBtn : 0,
       step : 0,
       image : '',
-      작성한글: '',
-      선택한필터 : '',
-      좋아요 : [0,0,0],
-      프로필 : '',
+      write: '',
+      filterBox : '',
+      liked : 0,
+      profile : '',
 
     }
   },
   mounted(){
-      this.emitter.on('박스클릭함', (a)=>{
-      this.선택한필터 = a
+      this.emitter.on('boxCilck', (a)=>{
+      this.filterBox = a
     })
   },
   components: {
@@ -65,31 +67,31 @@ export default {
     },
     
     publish(){
-      var 내게시물 = {
+      var post = {
         name: "Kim Hyun",
         userImage: `https://e7.pngegg.com/pngimages/304/275/png-clipart-user-profile-computer-icons-profile-miscellaneous-logo-thumbnail.png`,
         postImage: this.image,
-        likes: this.좋아요++,
+        likes: this.liked++,
         date: "May 15",
         liked: true,
-        content: this.작성한글,
-        filter: this.선택한필터
+        content: this.write,
+        filter: this.filterBox
       };
-      this.vuestaData.unshift(내게시물);
+      this.vuestaData.unshift(post);
       this.step = 0
     },
     more(){
-       axios.get(`https://codingapple1.github.io/vue/more${this.더보기}.json`)
-      .then( 결과 =>{
-        console.log(결과.data);
-        this.vuestaData.push(결과.data);
-        this.더보기++;
+       axios.get(`https://codingapple1.github.io/vue/more${this.moreBtn}.json`)
+      .then( result =>{
+        console.log(result.data);
+        this.vuestaData.push(result.data);
+        this.moreBtn++;
       })
     },
     upload(e){
-      let 파일 = e.target.files;
-      console.log(파일[0]);
-      let url = URL.createObjectURL(파일[0]);
+      let file = e.target.files;
+      console.log(file[0]);
+      let url = URL.createObjectURL(file[0]);
       console.log(url);
       this.image = url;
       this.step++

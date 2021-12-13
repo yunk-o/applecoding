@@ -26,7 +26,7 @@ export default [
     likes: 49,
     date: "Apr 4",
     liked: false,
-    content: "우리집 개는 화장실 물도 내림",
+    content: "뷰스타그램에 오신걸 환영해요",
     filter: "lofi"
   }
 ]

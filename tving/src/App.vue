@@ -5,7 +5,6 @@
     </div>
     
     <Container :Item = 'Item' :Goods01= 'Goods01' :Goods02= 'Goods02'>
-    <router-view to = "./login">ddd</router-view>
     </Container>
     <Footer/>
     
