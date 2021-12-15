@@ -21,10 +21,33 @@
             }
         }
 
+        기계.prototype.gender = '남';  
+        
         var 학생1 = new 기계('fsd')
         var 학생2 = new 기계()
+        //new 키워드
+
+        기계.prototype.gender = '남'
+        //prototype은 함수에만 생성 가능
 
         학생1.sayHi();
+
+
+        var arr2 = [1,2,3];
+        console.log(arr2)
+
+        var arr = [1,2,3];
+        console.log( arr.toString() ); //가능
+
+        
+
+        // Q. 그럼 prototype으로 상속시키는거랑 constructor로 상속시키는거랑 차이가 뭐죠?
+
+        // A. 자식들이 값을 직접 소유하게 만들고 싶으면 constructor로 상속시키시면 되고
+
+        // 부모만 가지고 있고 그걸 참조해서 쓰게 만들고 싶으면 prototype으로 상속시키면 되겠쥬?
+
+        // 보통은 그래서 상속할 수 있는 함수 같은 것들은 prototype으로 많이 만들어놓습니다. 
     </script>
 </body>
 </html>

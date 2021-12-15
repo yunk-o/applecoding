@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        function 함수(e1,e2){
+            console.log();
+            this.name = e1;
+            this.age = e2;
+            // this.sayHi = function(){
+            //     console.log('안녕나는' + this.name + '이야')
+            // }
+        }
+
+        함수.prototype.sayHi = function(){console.log('안녕나는' + this.name + '이야')}; 
+        
+        var 학생1 = new 함수( name = 'Kim', age = 20)
+        var 학생2 = new 함수( name = 'Park', age = 21 )
+        var 학생3 = new 함수( name = 'Lee', age = 22 )
+        // var 학생1 = { name : 'Kim', age : 20 }
+        // var 학생2 = { name : 'Park', age : 21 }
+        // var 학생3 = { name : 'Lee', age : 22 }
+
+        
+        var value = 3; // 제거 대상
+        var arr1 = [1,2,3];
+
+        arr1 = arr1.filter(function (item) {
+            return item !== value;
+        });
+
+        console.log(arr1)//
+
+        Array.prototype.remove3 = function(e){
+            for (var i = 0; i < arr.length; i++) {
+                if ( this[i] === e ) {
+                arr.splice(i,1);
+                }
+            }
+        };
+
+        var arr = [1,2,3,4];
+        arr.remove3(1);
+
+        console.log(arr); //[1,2,4]
+    </script>
+</body>
+</html>
