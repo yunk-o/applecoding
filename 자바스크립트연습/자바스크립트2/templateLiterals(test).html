@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        // var 변수 = '손흥민';
+        // var 문자 = `안녕하세요 ${변수} 입니다`;
+
+        // function 해체분석기(문자들, 변수들, 변수들2){
+        // console.log(문자들);
+        // console.log(변수들);
+        // console.log(변수들2);
+        // console.log(문자들[1] + 변수들 + 문자들[0])
+        // }
+
+        // 해체분석기`안녕하세요 ${변수} 입니다 ${변수}` ;
+
+
+        // var 변수 = `윤경쓰` 
+        // var 문자 = `안녕하세요 ${변수}`
+         //backquote 백틱? (엔터키가능, 중간중간 변수넣기 쉬움)
+        
+        // console.log(문자);
+
+        var pants = 20;
+        var socks = 100;
+        var 문자 = `바지${pants} 양말${socks}`
+        console.log(문자)
+
+        function 함수(st, va, va2){
+            console.log(st);//문자들
+            console.log(va);//변수들
+            console.log(st[0] +va2 + st[1] + va)
+        }
+        
+        함수`바지${pants} 양말${socks}`;
+        
+        // var pants = 0;
+        // var socks = 100;                     
+        // var 문자 = `바지${pants} 양말${socks}`;
+        // console.log(문자)
+
+        // function 함수(st, va, va2){
+        //     if(va == 0){
+        //         console.log('바지다팔렸어요 양말' + va2)
+        //     } else {
+        //         console.log('아직 있어요 사세요')
+        //     }
+        // }
+        
+        // 함수`바지${pants} 양말${socks}`;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        //스프레드 오퍼레이터
+        var array = ['hello','world'];
+        console.log(...array)
+        
+        var moonja = 'hello'
+        console.log(...moonja)
+
+        function plus(a,b,c){
+            console.log(a + b + c)
+        }
+        var arr = [10, 20, 30];
+
+        plus.apply(undefined, arr);
+        plus(...arr);
+
+        //apply 함수 (insa를 person2에서 쓰고싶을때)
+        //call 함수 --> 기능은 apply랑 똑같은데 파라미터 넣는게 다름
+        var person = {
+            insa : function(){
+                console.log(this.name + '안녕')
+            }
+        }
+
+        var person2 = {
+            name:'손흥민'
+        }
+        person.insa.apply(person2, [1,2])
+        person.insa.call(person2, 1,2)
+
+        person.insa()
+
+    </script>
+</body>
+</html>

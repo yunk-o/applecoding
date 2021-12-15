@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        // var 학생1 = {name:'kim',age:15}
+
+        function 기계(이름){
+            this.name = 이름;
+            this.age =15;
+            this.sayHi = function(){
+                console.log('안녕하세요' + this.name + '입니다')
+            }
+        }
+
+        var 학생1 = new 기계('fsd')
+        var 학생2 = new 기계()
+
+        학생1.sayHi();
+    </script>
+</body>
+</html>
