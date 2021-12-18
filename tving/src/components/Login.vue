@@ -1,5 +1,7 @@
 <template>
-    <div>로그인창이다</div>
+    <div>
+        <div>ddd</div>
+    </div>
 </template>
 <script>
 export default {

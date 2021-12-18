@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class 할아버지{
+        constructor(name){
+            this.성 = 'Kim';
+            this.이름 = name;
+        }
+        sayHi(){
+            console.log('안녕 나는 할아버지')
+        }
+        }
+
+        class 아버지 extends 할아버지{
+        constructor(name){
+            super(name);
+            this.나이 = 50;
+        }
+        sayHi2(){
+            console.log('안녕 나는 아버지');
+            super.sayHi();
+        }
+        }
+
+        var a = new 아버지('만수');
+
+
+    
+        class 사람 {
+        constructor(){
+            this.name = 'Park';
+            this.age = 20;
+        }
+        get nextAge(){
+            return this.age + 1
+        }
+        set setAge(나이){
+            this.age = 나이;
+        }
+        }
+
+        var 사람1 = new 사람();
+    </script>    
+</body>
+</html>

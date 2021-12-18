@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <script>
+        class Dog {
+            constructor(t,c){
+                this.type=t;
+                this.color=c;
+                
+            }
+            한살먹기(){
+                if(this instanceof Cat){
+                    this.age++
+                }
+            }
+        }
+
+        var 강아지1 = new Dog('말티즈','white');
+        var 강아지2 = new Dog('진돗개','brown');
+        // var 강아지1 = { type : '말티즈', color : 'white' };
+        // var 강아지2 = { type : '진돗개', color : 'brown' }; 
+
+        class Cat extends Dog{
+            constructor(t,c,a){
+                super(t,c);
+                this.age=a;
+            }
+        }
+
+        var 고양이1 = new Cat('코숏','white',5);
+        var 고양이2 = new Cat('러시안블루','brown',2);
+
+
+        class Unit {
+            constructor(){
+                this.공격력 = 5;
+                this.기본체력 = 100;
+            }
+            get battlePoint (){
+                return this.공격력 + this.기본체력 
+            }
+            set heal(e){
+                this.체력 = this.체력 + e; 
+            }
+        }
+
+        var 인스턴스  = new Unit()
+        console.log(인스턴스.battlePoint);
+        인스턴스.heal = 50 
+        // var 인스턴스 = {공격력 : 5, 기본체력 : 100}
+
+
+        var data = {
+            odd : [],
+            even : []
+        }
+    </script>
+</body>
+</html>

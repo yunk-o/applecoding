@@ -3,12 +3,11 @@
     <div class="container">
       <Header/>
     </div>
-    
     <Container :Item = 'Item' :Goods01= 'Goods01' :Goods02= 'Goods02'>
     </Container>
     <Footer/>
-    
-    <!-- <router-view></router-view> -->
+    <router-view>dffdsf</router-view>
+    <!-- <router-link to="../login" >홈페이지</router-link> -->
   </div>
 </template>
 
