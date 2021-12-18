@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="container">
             <div class="main-slide">
                 <Carousel :autoplay="4000" :wrap-around="true">
@@ -203,7 +202,7 @@
                         <div class="txt-box">
                             <div class="box">
                                 <div class="col-group">
-                                    <img v-for="a in 5" :key='a'  class="star" src="../assets/images/star.png" alt="">
+                                    <img v-for="a in 5" :key='a'  class="star" src="../../assets/images/star.png" alt="">
                                 </div>
                                 <h3>상품후기</h3>
                                 <p>아이가 좋아하네요. 가격도 착하고 잘 산것 같습니다.아이가 좋아하네요. 가격도 착하고 잘 산것 같습니다.</p>
@@ -228,7 +227,7 @@
         <!-- //베스트 리뷰 sec07-->
         <div class="btn-insta">
             <a href="https://www.instagram.com/tvingmall.official/" class="col-group">
-                <img src="../assets/images/insta.png" alt="">
+                <img src="../../assets/images/insta.png" alt="">
                 <p>티빙몰 인스타그램 바로가기</p>
             </a>
         </div>
