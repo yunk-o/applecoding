@@ -82,13 +82,13 @@ header .menu .left::after {
     position: absolute;
     content: '';
     top:0px;
-    right:-50px; 
+    right:-60px; 
     width: 2px;
     height:15px;
     background:#bdbdbd;
 }
 header .menu .right {
-    gap:40px;
+    gap:50px;
 }
 footer {
     background:#212121 ;

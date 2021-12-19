@@ -1,6 +1,6 @@
 <template>
     <div class="item">
-        <a href="">
+        <router-link to="./detail">
             <div class="img-box">
                 <img :src="Item.userImage" alt="">
             </div>
@@ -11,7 +11,7 @@
                     <h4 class="price">{{Item.price}}</h4>
                 </div>
             </div>
-        </a>
+        </router-link>
     </div>
 </template>
 <script>

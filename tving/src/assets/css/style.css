@@ -478,3 +478,91 @@
 .carousel__slide:nth-child(10) {
     background: url(https://mall-image.tving.com/media/image/default/2021/09/f1f398019f006ba53d3537324c5ae0cb.jpg);
 }
+.detail-top .left li{
+    padding-bottom:10px;
+}
+.detail-top .title {
+    width:120px
+}
+.detail-top .cont {
+    width:calc(100% - 120px)
+}
+.detail-top .img-box {
+    width:400px;
+    margin:0 auto;
+    text-align: center;
+}
+.detail-top .img-box img {
+    width:100%
+}
+.detail-top .img-box h3 {
+    font-size:30px
+}
+.detail-top .img-box p {
+    font-size:24px
+}
+.detail-top .txt-box {
+    align-items: flex-start;
+    background:#f7f7f7;
+    padding:30px 40px;  
+}
+.detail-top .txt-box .left {
+    width:50%;
+}
+.detail-top .txt-box .right {
+    width:50%;
+}
+.detail-top .select-box {
+    padding-bottom:20px;
+}
+.detail-top .select-box select{
+    padding:10px;
+}
+.detail-top .select-box option{
+    padding:10px;
+}
+.detail-top .gray-box{
+    /* display:none; */
+    border: 1px solid #ddd;
+    background:#f3f2ee;
+    padding:20px;
+    margin-bottom:20px;
+}
+.detail-top .gray-box .g-title {
+    justify-content:space-between;
+    padding-bottom:15px;
+}
+.detail-top .gray-box .price-box {
+    justify-content: space-between;
+}
+.detail-top .gray-box .num {
+    width:60px;
+    height:38px;
+    padding:5px 10px; 
+    background:#fff;
+    text-align: center;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+.gray-box .btn-num {
+    height:38px;
+    background: #fff;
+    padding:5px 10px;
+    border:1px solid #ddd;
+}
+.detail-btn-group button{
+    width:50%;
+    padding:20px;
+    color:#fff
+}
+.detail-btn-group button:first-child{
+    background:#999;
+}
+.detail-btn-group button:last-child{
+    background:#212121;
+}
+.detail-img {
+    width:1000px;
+    margin:0 auto;
+    margin-top:40px
+}

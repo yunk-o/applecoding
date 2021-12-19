@@ -2,6 +2,7 @@ export default [
     {
         id:1,
         userImage: "https://mall-image.tving.com/media/image/goods/2021/11/934a4d67c23a902b4015b1b8d95216bd@270x270.jpg",
+        detailImage : "https://mall-image.tving.com/media/file/default/2021/12/c2befcaafba91839f7d0f7a5b6923566.jpg",
         name: "2022 매일매일 신묘한 일력",
         price: 17000
     },
