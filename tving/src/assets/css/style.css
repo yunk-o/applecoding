@@ -566,3 +566,91 @@
     margin:0 auto;
     margin-top:40px
 }
+.signUp{
+    margin-bottom:100px;
+}
+.signUp *{
+    font-family: 'Open sans';
+}
+.signUp p {
+    letter-spacing:-0.8px;
+    padding-bottom:10px;
+    color:#555;
+    font-size:13px;
+}
+.signUp p span {
+    display: inline;
+    color:#ee6900;
+    font-size:13px;
+    letter-spacing: -1px;
+}
+.signUp .top{
+    text-align: center;
+}
+.signUp .top h2 {
+    font-size: 48px;
+    padding-top: 50px;
+}
+.signUp .top p {
+    font-size:16px;
+    color:#555;
+    padding-top:30px;
+}
+.signUp .gray-box {
+    width:1060px;
+    margin:0 auto;
+    padding:50px;
+    background: #f8f8f8;
+    margin-top:50px
+}
+.signUp .bor-top {
+    border-top:1px solid #222;
+} 
+.signUp .both{
+    gap:50px;
+}
+.signUp .left {
+    width:50%
+}
+.signUp .left h3 {
+    font-size:24px;
+    color:#222;
+    padding-bottom:50px
+}
+.signUp .left p {
+    font-size:14px;
+}
+.signUp .right {
+    width:50%
+}
+.signUp .right div {
+    width:100%;
+}
+.signUp .right div input{
+    width:100%;
+    margin-bottom:10px
+}
+.signUp .right div p {
+    padding-bottom:5px
+}
+.signUp .txt-box h3{
+    color:#222;
+    font-size:18px;
+    padding-bottom:15px
+}
+.signUp .btn-signup{
+    width:100%;
+    padding:10px;
+    background:#333;
+    color:#fff;
+    border-radius: 3px;
+
+}
+.signUp .partner{
+    margin-top:30px;
+}
+.signUp .err-msg{
+    display:none;
+    font-size:11px;
+    line-height: 10px;
+}

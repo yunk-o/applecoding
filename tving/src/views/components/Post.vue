@@ -8,7 +8,9 @@
                 <div class="best">{{Item.id}}</div>
                 <div class="txt">
                     <h3 class="name">{{Item.name}}</h3>
-                    <h4 class="price">{{Item.price}}</h4>
+                    <h4 id="price" class="price">{{Item.price}}</h4>
+
+                     
                 </div>
             </div>
         </router-link>
@@ -17,8 +19,16 @@
 <script>
 export default {
     name: 'Post',
+    data(){
+        return{
+            input:'',
+        }
+    },
     props: {
         Item: Array,
+    },
+    methods : {
+      
     }
 }
 </script>
