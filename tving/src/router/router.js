@@ -21,6 +21,11 @@ const routes = [
     name: 'Detail',
     component: () => import('@/views/register/PostDetail'),
   },
+  {
+    path: '/kakaologin',
+    name: 'KakaoLogin',
+    component: () => import('@/views/register/KakaoLogin'),
+  },
 ];
 
 

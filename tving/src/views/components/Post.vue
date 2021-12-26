@@ -8,10 +8,9 @@
                 <div class="best">{{Item.id}}</div>
                 <div class="txt">
                     <h3 class="name">{{Item.name}}</h3>
-                    <h4 id="price" class="price">{{Item.price}}</h4>
-
-                     
+                    <h4 id="price" class="price">{{post}}</h4>
                 </div>
+                <!-- {{post}} -->
             </div>
         </router-link>
     </div>
@@ -19,16 +18,22 @@
 <script>
 export default {
     name: 'Post',
+        props: {
+        Item: Array,
+    },
     data(){
         return{
             input:'',
+            posts : this.Item.price,
+            post : '',
         }
-    },
-    props: {
-        Item: Array,
     },
     methods : {
       
+    },
+    mounted() {
+        console.log(String(this.posts).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))
+        this.post = String(this.posts).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     }
 }
 </script>

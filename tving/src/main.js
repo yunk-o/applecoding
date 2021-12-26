@@ -9,4 +9,6 @@ const app = createApp(App);
 
 app.use(router); // 사용 설정 하기
 
-app.mount('#app');
+app.mount('#app')
+
+window.Kakao.init("351d2490be68e1d133416c1efda79d40")

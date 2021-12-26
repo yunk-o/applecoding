@@ -31,39 +31,35 @@
                      
                         <div class="col-group select-box">
                             <h3 class="title">선택</h3>
-                            <select class="cont" v-model="modal" name="" id="my-select" @click="clickSelect(i)" >
-                                <option :value="0" >선택하세요</option> 
-                                <option :value="1" >선택{{1}}</option> 
-                                <option :value="2" >선택{{2}}</option> 
-                                <option :value="3" >선택{{3}}</option> 
-                                <option :value="4" >선택{{4}}</option> 
+                            <select class="cont"  name="sortBy" id="sortBy" @change="modalHandler" v-model="projectType">
+                                <option v-for="(item, index) in productOptions" :value="item.text" :key="index">{{item.text}}</option>
                             </select>
                         </div>
                         <ul id="id_ul_list">
-                             <li id="box" class="test" v-for="(a,i) in step" :key="i">
-        
-                                <div id="list" class="gray-box" v-if="modal == i"  >
+                            <li id="box" class="test" v-for="(section, index) in sections" :key="index" >
+                                <div id="list" class="gray-box" >
                                     <div class="col-group g-title">
-                                        <h3>2022 신묘한 일력{{i}}</h3>
-                                        <button @click="clickBtn(i)">X</button>
+                                        <h3>{{ sections[index] }}</h3>
+                                        <button @click="deleteModalHandler(section)">X</button>
                                     </div>
                                     <div class="col-group price-box">
                                         <div class="col-group">
-                                            <button class="btn-num" @click="step[i]--">-</button>
-                                            <p class="num">{{step[i]}}</p>
-                                            <button class="btn-num" @click="step[i]++">+</button>
+                                            <button class="btn-num" @click="step[index]--">-</button>
+                                            <p class="num">{{step[index]}}</p>
+                                            <button class="btn-num" @click="step[index]++">+</button>
                                         </div>
-                                        <p><span>{{price*step[i]}}</span>원</p>
+                                        <p><span>{{price*step[index]}}</span>원</p>
+                                        <!-- {{price*step[index]}}를 묶어서 하나로 만들어주세요 /  -->
                                     </div>
                                 </div>
-                                
                             </li>
                         </ul>
                         <div>
                             <p>전체금액</p>
                         </div>
                         
-                        <p id="price" @click="num()"> 19000</p>
+                        <p id="price">{{price + price2}}원</p>
+                         <!-- {{price*step[index]}}를 묶어서 하나로 만들고 박스들마다 금액을 더해주세요 /  -->
                         <div class="col-group detail-btn-group">
                             <button>장바구니</button>
                             <button>바로구매</button>
@@ -93,50 +89,58 @@ export default {
         return{
             step:[0,0,0,0,0],
             price:10900,
+            price2:10000,
             modal:0,
-            누른거:0,
+            // modalHandler : false,
+            sections: ['2022 신묘한 일력 01'],      
+            projectType: 'sort',
+            productOptions: [
+                { value: 0, text: '2022 신묘한 일력 01', },
+                { value: 1, text: '2022 신묘한 일력 02', },
+                { value: 2, text: '2022 신묘한 일력 03', },
+                { value: 3, text: '2022 신묘한 일력 04', }
+            ],
+            totalPrice:0,
+            
         }
     },
     methods: {
-        clickBtn(){
-            for(let i = 0; i < this.modal; i++){
-                document.getElementsByClassName('test')[this.modal].style.display='none';
-            }
-        },
-        num(){
-            document.getElementById('price').toFixed(3)
-        },
-        clickSelect(){
-            var mySelect = document.getElementById('my-select')
-            var count = 0
-
-            mySelect.addEventListener('click', function() {
-                count++
-                console.log('You selected: ', count);
-               
-                    // getElementById('list')
-
-                
-            });
-            // mySelect.addEventListener('click', ()=> {
-            // for(let i = 0; i < this.누른거; i++){
-            //     유저가 선택한 갯수만큼 <div>를 만들어주세요~
-            // }
+       
+        modalHandler(e) {
+            const prd = e.target.value;
+            // let prdData = this.sections.map(item => {
+            //     return item;
             // })
+            // console.log(prdData);
+            if(this.sections.includes(prd) == false){
+                this.sections.push(prd);
+            }else {
+                alert('현재 선택된 제품입니다.')
+            }
+            // console.log(e.target.value);
         },
-    },
-    // watch : {
-    //     modal(){
-    //         if(this.누른거 == 1){
-    //             alert('뭔데')
-    //         } else {
-    //             alert('개빡치네')
-    //             document.getElementById('list').style.display="none"
-
-    //         }
-    //     }
+        deleteModalHandler(product) {
+            const prd = product;
+            // let prdData = this.sections.map(item => {
+            //     return item;
+            // })
+            const data = this.sections.indexOf(prd)
+            this.sections.splice(data, 1);
+            
+        },
+        // num(){
+        //     for(let i = 0; i < this.sections; i++){
+        //         this.price*this.step[i]
+        //     }
+        // }
         
-    // },
+        // eachPrice(){
+        //     for(let i = 0; i < this.sections; i++){
+        //         let money = this.price * i
+        //         console.log(money)
+        //     }
+        // },
+    },
     components: {
         Header : Header,
         Footer : Footer,

@@ -433,20 +433,23 @@
     border-radius:20px;
     margin-bottom:20px
 }
-.carousel__prev, .carousel__next {
-    width:50px;
-    height:50px;
-    background: #aaa;
+.carousel__prev , .carousel__next {
+    width:40px !important;
+    height:40px !important;
+    background-color: #aaa !important;
 }
 .carousel__pagination-button{
-    background: #aaa;
+    background: #aaa !important
+    ;
 }
 .carousel__pagination-button--active {
-    background:#555;
+    background:#555 !important;
 }
 .carousel__prev svg, .carousel__next svg {
-    width:40px; 
-    height:40px
+    width:100%; 
+    height:100%;
+    background-color: #aaa;
+    border-radius: 50%;
 }
 .carousel__slide:nth-child(1) {
     background: url(https://mall-image.tving.com/media/image/default/2021/11/a5f2d918f2ef870482d52dd106eb0a18.jpg);
@@ -653,4 +656,79 @@
     display:none;
     font-size:11px;
     line-height: 10px;
+}
+.login .container {
+    width:400px;
+    padding:100px 0;
+}
+.login .top {
+    text-align: center;
+}
+.login .top h2{
+    font-size: 48px;
+}
+.login .box {
+    width:100%;
+    margin-top:30px;
+}
+.login .box input {
+    width:100%;
+    padding:20px;
+    border-radius:5px;
+    margin-bottom:10px
+}
+.login .box button {
+    width:100%;
+    padding:20px;
+    border-radius:5px;
+    background:#dedede;
+}
+.login .btn-group {
+    padding-top:20px;
+    justify-content: space-between;
+}
+.login .btn-group div a{
+    padding-left:10px;
+}
+.login .line-group {
+    position: relative;
+    padding-top:30px;
+    justify-content: space-between;
+}
+.login .line-group span {
+    color:#aaa;
+}
+.login .line-group .line::after{
+    position: absolute;
+    content: '';
+    width:170px;
+    height:1px;
+    background: #dedede;
+}
+.login .line-group .line1::after {
+    top:40px;
+    left: 0;
+}
+.login .line-group .line2::after {
+    top:40px;
+    right: 0;
+}
+.login h4 {
+    padding-top:30px;
+    text-align: center;
+}
+.login .icon-group {
+    justify-content: center;
+    gap:20px;
+    margin-top:20px;
+}
+.login .icon-group li {
+    width:40px;
+    height:40px;
+    border-radius: 100px;
+    
+}
+.login .icon-group li:first-child{
+    padding:7px;
+    border:1px solid #efefef;
 }

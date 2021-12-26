@@ -3,17 +3,17 @@
       <div class="top col-group">
         <h1 class="logo">
           <router-link to="/">
-            <img src="../../assets/logo.png" alt="">
+            <img src="../../assets/images/logo.png" alt="">
           </router-link>
         </h1>
         <div class="search-box">
           <input type="text" placeholder="검색어를 입력해 주세요">
-          <button><img src="../../assets/icon_search.png" alt=""></button>
+          <button><img src="../../assets/images/icon_search.png" alt=""></button>
         </div>
         <div class="col-group btn-box">
           <router-link to="./login">로그인</router-link>
           <router-link to="./signup">회원가입</router-link>
-          <a href=""><img src="../../assets/icon_cart.png" alt=""></a>
+          <a href=""><img src="../../assets/images/icon_cart.png" alt=""></a>
         </div>
       </div>
       <div class="menu col-group">
@@ -24,7 +24,7 @@
           <a href="">#술도녀</a>
         </div>
         <div class="right col-group">
-          <a href=""><img src="../../assets/logo_tving_original.png" alt=""></a>
+          <a href=""><img src="../../assets/images/logo_tving_original.png" alt=""></a>
           <a href="">드라마</a>
           <a href="">예능</a>
           <a href="">애니/캐릭터</a>
